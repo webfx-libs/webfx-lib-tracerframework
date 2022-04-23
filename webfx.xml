@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
 
+    <!-- For Json -->
+    <parent name="webfx-stack-platform"/>
+
     <update-options>
         <generate-export-snapshot/>
     </update-options>
 
     <required-libraries>
-        <webfx-library artifact="dev.webfx:webfx-parent:0.1.0-SNAPSHOT"/>
+        <group>
+            <groupId>dev.webfx</groupId>
+            <version>0.1.0-SNAPSHOT</version>
+            <webfx-library name="webfx-stack-platform"/>
+            <webfx-library name="webfx-lib-odometer"/>
+        </group>
     </required-libraries>
 
     <exported-packages>
@@ -37,8 +45,16 @@
 
         <project name="webfx-lib-tracerframework">
 
+            <!-- For Json -->
+            <parent name="webfx-stack-platform"/>
+
             <required-libraries>
-                <webfx-library artifact="dev.webfx:webfx-parent:0.1.0-SNAPSHOT"/>
+                <group>
+                    <groupId>dev.webfx</groupId>
+                    <version>0.1.0-SNAPSHOT</version>
+                    <webfx-library name="webfx-stack-platform"/>
+                    <webfx-library name="webfx-lib-odometer"/>
+                </group>
             </required-libraries>
 
             <exported-packages>
