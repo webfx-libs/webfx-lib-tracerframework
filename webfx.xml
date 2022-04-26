@@ -62,23 +62,33 @@
             </exported-packages>
 
             <dependencies>
-                <used-by-source-modules>
-                    <module>java.base</module>
-                    <module>webfx-kit-javafxbase-emul</module>
-                    <module>webfx-kit-javafxgraphics-emul</module>
-                    <module>webfx-lib-odometer</module>
-                    <module>webfx-platform-client-uischeduler</module>
-                    <module>webfx-platform-shared-json</module>
-                    <module>webfx-platform-shared-log</module>
-                    <module>webfx-platform-shared-webworker</module>
-                </used-by-source-modules>
+                <used-by-source-modules/>
             </dependencies>
 
             <source-packages>
                 <package>dev.webfx.lib.tracerframework</package>
             </source-packages>
 
+            <used-by-source-modules>
+                <module>java.base</module>
+                <module>webfx-kit-javafxbase-emul</module>
+                <module>webfx-kit-javafxgraphics-emul</module>
+                <module>webfx-lib-odometer</module>
+                <module>webfx-platform-client-uischeduler</module>
+                <module>webfx-platform-shared-json</module>
+                <module>webfx-platform-shared-log</module>
+                <module>webfx-platform-shared-webworker</module>
+            </used-by-source-modules>
+
         </project>
+
+        <usages>
+
+            <java-package name="java.util.regex"/>
+
+            <java-class name="javafx.scene.control.ScrollPane"/>
+
+        </usages>
 
     </export-snapshot>
 
