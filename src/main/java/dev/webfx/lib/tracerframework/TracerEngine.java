@@ -5,9 +5,9 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 import dev.webfx.platform.client.services.uischeduler.UiScheduler;
-import dev.webfx.platform.shared.services.webworker.WebWorker;
-import dev.webfx.platform.shared.services.webworker.pool.WebWorkerPool;
-import dev.webfx.platform.shared.services.webworker.spi.base.JavaCodedWebWorkerBase;
+import dev.webfx.stack.platform.webworker.WebWorker;
+import dev.webfx.stack.platform.webworker.pool.WebWorkerPool;
+import dev.webfx.stack.platform.webworker.spi.base.JavaCodedWebWorkerBase;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
