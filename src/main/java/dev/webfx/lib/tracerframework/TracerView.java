@@ -196,7 +196,7 @@ public class TracerView {
     }
 
     private void measureNodeWidth(Node node, Consumer<Double> widthConsumer) {
-        // WebFx can't calculate layoutBounds before the node is inserted in the DOM so we postpone the call
+        // WebFX can't calculate layoutBounds before the node is inserted in the DOM so we postpone the call
         UiScheduler.scheduleInAnimationFrame(
                 () -> widthConsumer.accept(node.getLayoutBounds().getWidth()),
                 5); // 5 frames delay should be ok
@@ -355,13 +355,13 @@ public class TracerView {
     private static Pane createSvgButton(String content, Runnable clickRunnable) {
         SVGPath path = new SVGPath();
         path.setContent(content);
-        // We now embed the svg path in a pane. The reason is for a better click experience. Because in JavaFx (not in
+        // We now embed the svg path in a pane. The reason is for a better click experience. Because in JavaFX (not in
         // the browser), the clicking area is only the filled shape, not the empty space in that shape. So when clicking
         // on a gear icon on a mobile for example, even if globally our finger covers the icon, the final click point
         // may be in this empty space, making the button not reacting, leading to a frustrating experience.
         Pane pane = new Pane(path); // Will act as the mouse click area covering the entire surface
         // The pane needs to be reduced to the svg path size (which we can get using the layout bounds).
-        path.sceneProperty().addListener(p -> { // This postpone is necessary only when running in the browser, not in standard JavaFx
+        path.sceneProperty().addListener(p -> { // This postpone is necessary only when running in the browser, not in standard JavaFX
             Bounds b = path.getLayoutBounds(); // Bounds computation should be correct now even in the browser
             pane.setMinSize(b.getWidth(), b.getHeight());
             pane.setMaxSize(b.getWidth(), b.getHeight());
