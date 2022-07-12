@@ -22,8 +22,8 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-import dev.webfx.platform.client.services.uischeduler.UiScheduler;
-import dev.webfx.platform.shared.services.log.Logger;
+import dev.webfx.platform.uischeduler.UiScheduler;
+import dev.webfx.platform.console.Console;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -656,7 +656,7 @@ public class TracerView {
             ctx.drawImage(snapshots.get(0), 0, 0);
             updatePlaceButtonBar();
             playOrStopSnapshots(1);
-            Logger.log("totalIterations = " + totalIterations);
+            Console.log("totalIterations = " + totalIterations);
         }
     }
 

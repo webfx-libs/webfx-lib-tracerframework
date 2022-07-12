@@ -74,8 +74,8 @@
                 <module>webfx-kit-javafxbase-emul</module>
                 <module>webfx-kit-javafxgraphics-emul</module>
                 <module>webfx-lib-odometer</module>
-                <module>webfx-platform-client-uischeduler</module>
-                <module>webfx-platform-shared-log</module>
+                <module>webfx-platform-console</module>
+                <module>webfx-platform-uischeduler</module>
                 <module>webfx-stack-platform-json</module>
                 <module>webfx-stack-platform-webworker</module>
             </used-by-source-modules>

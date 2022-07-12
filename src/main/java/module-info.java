@@ -7,8 +7,8 @@ module webfx.lib.tracerframework {
     requires javafx.base;
     requires javafx.graphics;
     requires webfx.lib.odometer;
-    requires webfx.platform.client.uischeduler;
-    requires webfx.platform.shared.log;
+    requires webfx.platform.console;
+    requires webfx.platform.uischeduler;
     requires webfx.stack.platform.json;
     requires webfx.stack.platform.webworker;
 

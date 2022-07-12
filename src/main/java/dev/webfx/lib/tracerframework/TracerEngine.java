@@ -1,10 +1,11 @@
 package dev.webfx.lib.tracerframework;
 
+import dev.webfx.platform.console.Console;
 import javafx.animation.AnimationTimer;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
-import dev.webfx.platform.client.services.uischeduler.UiScheduler;
+import dev.webfx.platform.uischeduler.UiScheduler;
 import dev.webfx.stack.platform.webworker.WebWorker;
 import dev.webfx.stack.platform.webworker.pool.WebWorkerPool;
 import dev.webfx.stack.platform.webworker.spi.base.JavaCodedWebWorkerBase;
@@ -261,7 +262,7 @@ public final class TracerEngine {
             long totalTime = UiScheduler.nanoTime() - t0;
             lastFrameComputationTime = totalTime / MILLIS_IN_NANO;
             lastThreadsCount = threadsCount;
-            dev.webfx.platform.shared.services.log.Logger.log("Completed in " + lastFrameComputationTime + "ms (computation: " + cumulatedComputationTime / MILLIS_IN_NANO + "ms (" + 100 * cumulatedComputationTime / totalTime + "%) - UI: " + (totalTime - cumulatedComputationTime) / MILLIS_IN_NANO + "ms (" + 100 * (totalTime - cumulatedComputationTime) / totalTime + "%)");
+            Console.log("Completed in " + lastFrameComputationTime + "ms (computation: " + cumulatedComputationTime / MILLIS_IN_NANO + "ms (" + 100 * cumulatedComputationTime / totalTime + "%) - UI: " + (totalTime - cumulatedComputationTime) / MILLIS_IN_NANO + "ms (" + 100 * (totalTime - cumulatedComputationTime) / totalTime + "%)");
         }
     }
 
