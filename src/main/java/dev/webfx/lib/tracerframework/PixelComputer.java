@@ -1,8 +1,8 @@
 package dev.webfx.lib.tracerframework;
 
 import javafx.scene.paint.Color;
-import dev.webfx.stack.platform.json.JsonObject;
-import dev.webfx.stack.platform.webworker.spi.base.JavaCodedWebWorkerBase;
+import dev.webfx.platform.json.JsonObject;
+import dev.webfx.platform.webworker.spi.base.JavaCodedWebWorkerBase;
 
 /**
  * @author Bruno Salmon
