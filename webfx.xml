@@ -2,7 +2,7 @@
 <project>
 
     <!-- For Json -->
-    <parent name="webfx-stack-parent"/>
+    <parent name="webfx-parent"/>
 
     <update-options>
         <generate-export-snapshot/>
@@ -46,7 +46,7 @@
         <project name="webfx-lib-tracerframework">
 
             <!-- For Json -->
-            <parent name="webfx-stack-parent"/>
+            <parent name="webfx-parent"/>
 
             <required-libraries>
                 <group>
@@ -75,9 +75,9 @@
                 <module>webfx-kit-javafxgraphics-emul</module>
                 <module>webfx-lib-odometer</module>
                 <module>webfx-platform-console</module>
+                <module>webfx-platform-json</module>
                 <module>webfx-platform-uischeduler</module>
-                <module>webfx-stack-platform-json</module>
-                <module>webfx-stack-platform-webworker</module>
+                <module>webfx-platform-webworker</module>
             </used-by-source-modules>
 
         </project>
