@@ -1,5 +1,8 @@
 package dev.webfx.lib.tracerframework;
 
+import dev.webfx.platform.console.Console;
+import dev.webfx.platform.resource.Resource;
+import dev.webfx.platform.uischeduler.UiScheduler;
 import eu.hansolo.fx.odometer.Odometer;
 import eu.hansolo.fx.odometer.OdometerBuilder;
 import javafx.animation.*;
@@ -22,8 +25,6 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-import dev.webfx.platform.uischeduler.UiScheduler;
-import dev.webfx.platform.console.Console;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,6 +35,10 @@ import java.util.function.Consumer;
  * @author Bruno Salmon
  */
 public class TracerView {
+
+    static {
+        Font.loadFont(Resource.toUrl("Bitwise-m19x.ttf", TracerView.class), 16);
+    }
 
     private long totalIterations;
 
@@ -434,7 +439,7 @@ public class TracerView {
         if (octx == null) {
             ctx = canvas.getGraphicsContext2D();
             octx = overlayCanvas.getGraphicsContext2D();
-            overlayFont = Font.font("Courier", FontWeight.BOLD, null, 18);
+            overlayFont = Font.font("Bitwise", FontWeight.BOLD, null, 18);
         } else
             octx.clearRect(0, 0, canvasWidth, canvasHeight);
     }
@@ -453,7 +458,7 @@ public class TracerView {
                 showOverlayTexts(WAITING_FRAME_COMPLETION, "");
             else {
                 // Resetting the text animation at the end of the computation of the first frame
-                boolean firstFrameCompletion = lastOverlayTexts != null && lastOverlayTexts[0] == WAITING_FRAME_COMPLETION && !snapshots.isEmpty();
+                boolean firstFrameCompletion = lastOverlayTexts != null && lastOverlayTexts[0] == WAITING_FRAME_COMPLETION;
                 if (firstFrameCompletion)
                     overlayCharactersMax = 1;
                 long count = pixelComputer.getLastFrameIterations();
@@ -491,7 +496,7 @@ public class TracerView {
     private AnimationTimer overlayTextAnimationTimer;
     private int overlayCharactersMax;
     private String[] lastOverlayTexts;
-    private final static String CURSOR_CHAR = "\u25FC";
+    private final static String CURSOR_CHAR = "◼";
 
     private void showOverlayTexts(String... texts) {
         startOverlayTextAnimationIfNeeded();
