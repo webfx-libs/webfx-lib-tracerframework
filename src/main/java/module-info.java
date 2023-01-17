@@ -11,6 +11,7 @@ module webfx.lib.tracerframework {
     requires webfx.platform.json;
     requires webfx.platform.resource;
     requires webfx.platform.uischeduler;
+    requires webfx.platform.useragent;
     requires webfx.platform.webworker;
 
     // Exported packages
