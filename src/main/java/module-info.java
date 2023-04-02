@@ -6,6 +6,7 @@ module webfx.lib.tracerframework {
     requires java.base;
     requires javafx.base;
     requires javafx.graphics;
+    requires webfx.kit.launcher;
     requires webfx.lib.odometer;
     requires webfx.platform.arch;
     requires webfx.platform.console;
