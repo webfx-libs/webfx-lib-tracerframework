@@ -3,14 +3,13 @@
 module webfx.lib.tracerframework {
 
     // Direct dependencies modules
-    requires java.base;
     requires javafx.base;
     requires javafx.graphics;
     requires webfx.kit.launcher;
     requires webfx.lib.odometer;
     requires webfx.platform.arch;
+    requires webfx.platform.ast;
     requires webfx.platform.console;
-    requires webfx.platform.json;
     requires webfx.platform.os;
     requires webfx.platform.resource;
     requires webfx.platform.uischeduler;
